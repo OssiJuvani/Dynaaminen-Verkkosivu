@@ -15,22 +15,24 @@ function App() {
     let litres = bottles * 0.33
     let grams = litres * 8 * 4.5
     let burning = weight / 10
-    let blood = grams - (burning * time)
+    let gramsLeft = grams - (burning * time)
   
     if (gender === 'male'){
-      blood = grams / (weight * 0.7)
+      gramsLeft = grams / (weight * 0.7)
     } else {
-      blood = grams / (weight * 0.6)
+      gramsLeft = grams / (weight * 0.6)
     }
-    setResult(blood)
+    setResult(gramsLeft)
   }
+
+  
   
 
 
 return (
 
 <>
-<h3>Calculating alcohol blood level</h3>
+<h3>Calculating alcohol gramsLeft level</h3>
 
 <form onSubmit={calculate}>
 
